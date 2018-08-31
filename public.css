@@ -10,52 +10,102 @@
   background: red;
 }
 .block1 {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
   transition-property: all;
-  transition-duration: 1.2s;
-  transition-timing-function: linear;
+  -webkit-transition-duration: 1.2s;
+     -moz-transition-duration: 1.2s;
+          transition-duration: 1.2s;
+  -webkit-transition-timing-function: linear;
+     -moz-transition-timing-function: linear;
+          transition-timing-function: linear;
 }
 .block2 {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
   transition-property: all;
-  transition-duration: 1.2s;
-  transition-timing-function: ease;
+  -webkit-transition-duration: 1.2s;
+     -moz-transition-duration: 1.2s;
+          transition-duration: 1.2s;
+  -webkit-transition-timing-function: ease;
+     -moz-transition-timing-function: ease;
+          transition-timing-function: ease;
 }
 .block3 {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
   transition-property: all;
-  transition-duration: 1.2s;
-  transition-timing-function: ease-in;
+  -webkit-transition-duration: 1.2s;
+     -moz-transition-duration: 1.2s;
+          transition-duration: 1.2s;
+  -webkit-transition-timing-function: ease-in;
+     -moz-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
 }
 .block4 {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
   transition-property: all;
-  transition-duration: 1.2s;
-  transition-timing-function: ease-out;
+  -webkit-transition-duration: 1.2s;
+     -moz-transition-duration: 1.2s;
+          transition-duration: 1.2s;
+  -webkit-transition-timing-function: ease-out;
+     -moz-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
 }
 .block5 {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
   transition-property: all;
-  transition-duration: 1.2s;
-  transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 1.2s;
+     -moz-transition-duration: 1.2s;
+          transition-duration: 1.2s;
+  -webkit-transition-timing-function: ease-in-out;
+     -moz-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 .block5 {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
   transition-property: all;
-  transition-duration: 1.2s;
-  transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 1.2s;
+     -moz-transition-duration: 1.2s;
+          transition-duration: 1.2s;
+  -webkit-transition-timing-function: ease-in-out;
+     -moz-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 .block6 {
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
   transition-property: all;
-  transition-duration: 1.2s;
-  transition-timing-function: cubic-bezier(0.6, 0.1, 0, 0.59);
+  -webkit-transition-duration: 1.2s;
+     -moz-transition-duration: 1.2s;
+          transition-duration: 1.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.6, 0.1, 0, 0.59);
+     -moz-transition-timing-function: cubic-bezier(0.6, 0.1, 0, 0.59);
+          transition-timing-function: cubic-bezier(0.6, 0.1, 0, 0.59);
 }
 /******************** 02#  **********************/
 .ex {
-  perspective: 800px;
-  perspective-origin: 50% 50%;
-  transform-style: preserve-3d;
+  -webkit-perspective: 800px;
+     -moz-perspective: 800px;
+          perspective: 800px;
+  -webkit-perspective-origin: 50% 50%;
+     -moz-perspective-origin: 50% 50%;
+          perspective-origin: 50% 50%;
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 #block3d {
   width: 250px;
   height: 250px;
   background: #3399ff;
   margin: 100px auto;
-  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0, 0, 0);
+  -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0, 0, 0);
+     -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0, 0, 0);
+          transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0, 0, 0);
 }
 .input {
   width: 80%;
@@ -65,40 +115,104 @@
   width: 100%;
 }
 /***************** 03# *********************/
+@-webkit-keyframes squareAction {
+  /*设置动画关键帧*/
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  25% {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
+  50% {
+    -webkit-transform: rotateX(360deg) rotateY(0deg);
+            transform: rotateX(360deg) rotateY(0deg);
+  }
+  75% {
+    -webkit-transform: rotateX(360deg) rotateY(180deg);
+            transform: rotateX(360deg) rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateX(360deg) rotateY(360deg);
+            transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+@-moz-keyframes squareAction {
+  /*设置动画关键帧*/
+  0% {
+    -moz-transform: rotateX(0deg);
+         transform: rotateX(0deg);
+  }
+  25% {
+    -moz-transform: rotateX(180deg);
+         transform: rotateX(180deg);
+  }
+  50% {
+    -moz-transform: rotateX(360deg) rotateY(0deg);
+         transform: rotateX(360deg) rotateY(0deg);
+  }
+  75% {
+    -moz-transform: rotateX(360deg) rotateY(180deg);
+         transform: rotateX(360deg) rotateY(180deg);
+  }
+  100% {
+    -moz-transform: rotateX(360deg) rotateY(360deg);
+         transform: rotateX(360deg) rotateY(360deg);
+  }
+}
 @keyframes squareAction {
   /*设置动画关键帧*/
   0% {
-    transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+       -moz-transform: rotateX(0deg);
+            transform: rotateX(0deg);
   }
   25% {
-    transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+       -moz-transform: rotateX(180deg);
+            transform: rotateX(180deg);
   }
   50% {
-    transform: rotateX(360deg) rotateY(0deg);
+    -webkit-transform: rotateX(360deg) rotateY(0deg);
+       -moz-transform: rotateX(360deg) rotateY(0deg);
+            transform: rotateX(360deg) rotateY(0deg);
   }
   75% {
-    transform: rotateX(360deg) rotateY(180deg);
+    -webkit-transform: rotateX(360deg) rotateY(180deg);
+       -moz-transform: rotateX(360deg) rotateY(180deg);
+            transform: rotateX(360deg) rotateY(180deg);
   }
   100% {
-    transform: rotateX(360deg) rotateY(360deg);
+    -webkit-transform: rotateX(360deg) rotateY(360deg);
+       -moz-transform: rotateX(360deg) rotateY(360deg);
+            transform: rotateX(360deg) rotateY(360deg);
   }
 }
 .ex2 {
   width: 400px;
   height: 400px;
   position: relative;
-  perspective: 800px;
-  perspective-origin: 50% 50%;
+  -webkit-perspective: 800px;
+     -moz-perspective: 800px;
+          perspective: 800px;
+  -webkit-perspective-origin: 50% 50%;
+     -moz-perspective-origin: 50% 50%;
+          perspective-origin: 50% 50%;
   margin: 50px auto;
 }
 .change {
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   width: 200px;
   height: 200px;
   position: absolute;
   top: 100px;
   left: 100px;
-  animation: squareAction 3s infinite;/*设置动画*/
+  -webkit-animation: squareAction 3s infinite;
+     -moz-animation: squareAction 3s infinite;
+          animation: squareAction 3s infinite;/*设置动画*/
 }
 .square {
   width: 200px;
@@ -114,21 +228,33 @@
   color: #777;
 }
 .square:first-child {
-  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0, 0, -100px);
+  -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0, 0, -100px);
+     -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0, 0, -100px);
+          transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0, 0, -100px);
 }
 .square:nth-child(2) {
-  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0, 0, 100px);
+  -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0, 0, 100px);
+     -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0, 0, 100px);
+          transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate3d(0, 0, 100px);
 }
 .square:nth-child(3) {
-  transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg) translate3d(0, 0, 100px);
+  -webkit-transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg) translate3d(0, 0, 100px);
+     -moz-transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg) translate3d(0, 0, 100px);
+          transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg) translate3d(0, 0, 100px);
 }
 .square:nth-child(4) {
-  transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg) translate3d(0, 0, 100px);
+  -webkit-transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg) translate3d(0, 0, 100px);
+     -moz-transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg) translate3d(0, 0, 100px);
+          transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg) translate3d(0, 0, 100px);
 }
 .square:nth-child(5) {
-  transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg) translate3d(0, 0, 100px);
+  -webkit-transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg) translate3d(0, 0, 100px);
+     -moz-transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg) translate3d(0, 0, 100px);
+          transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg) translate3d(0, 0, 100px);
 }
 .square:nth-child(6) {
-  transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg) translate3d(0, 0, 100px);
+  -webkit-transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg) translate3d(0, 0, 100px);
+     -moz-transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg) translate3d(0, 0, 100px);
+          transform: rotateX(0deg) rotateY(-90deg) rotateZ(0deg) translate3d(0, 0, 100px);
 }
 /***************** public *********************/
