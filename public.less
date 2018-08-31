@@ -1,0 +1,172 @@
+/******************** 01#  **********************/
+.block{
+	.size();
+	.marT();
+	background:#3399ff;
+	&:hover{
+		width: 500px;
+		background:red;
+	}
+}
+
+.block1{
+	.transi(all,1.2s,linear);
+}
+.block2{
+	.transi(all,1.2s,ease);
+}
+.block3{
+	.transi(all,1.2s,ease-in);
+}
+.block4{
+	.transi(all,1.2s,ease-out);
+}
+.block5{
+	.transi(all,1.2s,ease-in-out);
+}
+.block5{
+	.transi(all,1.2s,ease-in-out);
+}
+.block6{
+	.transi(all,1.2s,cubic-bezier(0.6,0.1,0,0.59));
+}
+
+// 过渡属性，时间，模式
+//  linear	规定以相同速度开始至结束的过渡效果（等于 cubic-bezier(0,0,1,1)）。
+//  ease	规定慢速开始，然后变快，然后慢速结束的过渡效果（cubic-bezier(0.25,0.1,0.25,1)）。
+//  ease-in	规定以慢速开始的过渡效果（等于 cubic-bezier(0.42,0,1,1)）。
+//  ease-out	规定以慢速结束的过渡效果（等于 cubic-bezier(0,0,0.58,1)）。
+//  ease-in-out	规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）。
+//  cubic-bezier(n,n,n,n)	在 cubic-bezier 函数中定义自己的值。可能的值是 0 至 1 之间的数值。
+.transi(@pro:all,@dur:2s,@fun:linear){
+	transition-property: @pro;
+	transition-duration: @dur;
+	transition-timing-function: @fun;
+}
+
+
+
+/******************** 02#  **********************/
+// 设置场景
+.ex{
+	.persp();
+	.transf3d();
+}
+// 设置正方体
+#block3d{
+	.size(250px,250px);
+	background: #3399ff;
+	margin:100px auto;
+	.transfR(rotateX(0deg),rotateY(0deg),rotateZ(0deg),translate3d(0,0,0));
+}
+.input{
+	width: 80%;
+	margin:15px auto;
+	& input{
+		width: 100%;
+	}
+}
+
+
+/***************** 03# *********************/
+@keyframes squareAction { /*设置动画关键帧*/
+    0% {
+        transform: rotateX(0deg);
+    }
+    25% {
+        transform: rotateX(180deg);
+    }
+    50% {
+        transform: rotateX(360deg) rotateY(0deg);
+    }
+    75% {
+        transform: rotateX(360deg) rotateY(180deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+.ex2{
+	.size(400px,400px);
+	position: relative;
+	.persp(800px,50%,50%);
+	margin: 50px auto;
+}
+.change{
+	.transf3d();
+	.size(200px,200px);
+	position: absolute;
+	top:100px;
+	left:100px;
+	animation: squareAction 3s infinite; /*设置动画*/
+}
+.square{
+	.size(200px,200px);
+	border:1px solid #333;
+	position: absolute;
+	top:0px;
+	left:0px;
+	opacity:0.3;
+	text-align: center;
+	line-height:200px;
+	font-size: 42px;
+	color:#777;
+	// e
+	&:first-child{
+		.transfR(rotateX(0deg),rotateY(0deg),rotateZ(0deg),translate3d(0,0,-100px));
+	}
+	// f
+	&:nth-child(2){
+		.transfR(rotateX(0deg),rotateY(0deg),rotateZ(0deg),translate3d(0,0,100px));
+	}
+	// t
+	&:nth-child(3){
+		.transfR(rotateX(90deg),rotateY(0deg),rotateZ(0deg),translate3d(0,0,100px));
+	}
+	// b
+	&:nth-child(4){
+		.transfR(rotateX(-90deg),rotateY(0deg),rotateZ(0deg),translate3d(0,0,100px));
+	}
+	//r
+	&:nth-child(5){
+		.transfR(rotateX(0deg),rotateY(90deg),rotateZ(0deg),translate3d(0,0,100px));
+	}
+	// l
+	&:nth-child(6){
+		.transfR(rotateX(0deg),rotateY(-90deg),rotateZ(0deg),translate3d(0,0,100px));
+	}
+}
+.change{
+	// box-shadow: 0px 0px 50px rgba(0,0,0,0.3);
+}
+
+/***************** public *********************/
+.marT(@t:15px){
+	margin-top: @t;
+}
+.size(@w:40px,@h:40px){
+	width: @w;
+	height: @h;
+}
+// 视点
+// perspective人看东西的距离
+// perspective-origin观察视点。此处默认为视图的中心点
+.persp(@des:800px, @x:50%,@y:50%){
+	perspective: @des;
+	perspective-origin:@x @y;
+}
+// 使被转换的子元素保留其 3D 转换
+.transf3d(){
+	transform-style: preserve-3d;
+}
+
+//系统默认transform-origin值是：50% 50% 0根据元素中心点旋转,rotate是旋转，translate3d是平移的同时不受文档流影响
+.transfR(@type1:rotateX(0deg),@type2:rotateY(0deg),@type3:rotateZ(0deg),@transl:translate3d(0,0,0)){
+	transform: @type1 @type2 @type3 @transl;
+}
+.transfO(@type1:50%,@type2:50%,@type3:0){
+	transform-origin: @type1 @type2 @type3;
+}
+.transft(@type1:50%,@type2:50%,@type3:0){
+	transform-origin: @type1 @type2 @type3;
+}

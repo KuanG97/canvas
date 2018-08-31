@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../public.css">
+    <script type="text/javascript" src="practice-3d.js"></script>
+</head>
+
+<body>
+    <h1>01#过渡属性：Transition</h1>
+    <p>linear 规定以相同速度开始至结束的过渡效果（等于 cubic-bezier(0,0,1,1)）。</p>
+    <div class="block block1"></div>
+    <p>ease 规定慢速开始，然后变快，然后慢速结束的过渡效果（cubic-bezier(0.25,0.1,0.25,1)）。</p>
+    <div class="block block2"></div>
+    <p>ease-in 规定以慢速开始的过渡效果（等于 cubic-bezier(0.42,0,1,1)）。</p>
+    <div class="block block3"></div>
+    <p>ease-out 规定以慢速结束的过渡效果（等于 cubic-bezier(0,0,0.58,1)）。</p>
+    <div class="block block4"></div>
+    <p>ease-in-out 规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）。</p>
+    <div class="block block5"></div>
+    <p>cubic-bezier(n,n,n,n) 在 cubic-bezier 函数中定义自己的值。可能的值是 0 至 1 之间的数值。</p>
+    <div class="block block6"></div>
+    <hr>
+
+    <h1>02#3D场景使用属性：perspective</h1>
+    <div class="ex">
+        <div id="block3d">
+        </div>
+    </div>
+    <div class="input">
+        <p>rotate x: <span id="x">0</span> deg</p>
+        <input type="range" min="-360" max="360" id="rotatex" value="0" onchange="rotate()" />
+        <br/>
+        <p>rotate y: <span id="y">0</span> deg</p>
+        <input type="range" min="-360" max="360" id="rotatey" value="0" onchange="rotate()" />
+        <br/>
+        <p>rotate z: <span id="z">0</span> deg</p>
+        <input type="range" min="-360" max="360" id="rotatez" value="0" onchange="rotate()" />
+        <br/>
+    </div>
+    <hr>
+
+	<h1>03#尝试立体正方形:中间阴影部分是用于更好理解这个animate动作的实现</h1>
+    <div class="ex2">
+    	<div class="change">
+	    	<div class="square" id="square1">1</div>
+	        <div class="square" id="square2">2</div>
+	        <div class="square" id="square3">3</div>
+	        <div class="square" id="square4">4</div>
+	        <div class="square" id="square5">5</div>
+	        <div class="square" id="square6">6</div>
+        </div>
+    </div>
+</body>
+
+</html>
